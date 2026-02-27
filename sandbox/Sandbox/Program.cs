@@ -3,37 +3,136 @@ using System.IO.Compression;
 
 class Program
 {
+    public static void Greeting()
+    {
+        Console.WriteLine("Hello Bob");
+    }
+
+    public static int AddNumbers(int n1, int n2)
+    {
+        return n1 + n2;
+    }
+
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        Greeting();
 
-        int age;
+        int total = AddNumbers(10, 20);
 
-        Console.Write("Please input your age: ");
+        Console.WriteLine(total);
+    
+        // Console.WriteLine("Hello Sandbox World!");
+
+        // int age;
+
+        // Console.Write("Please input your age: ");
         // string response = Console.ReadLine();
         // age = int.Parse(response);
 
-        age = int.Parse(Console.ReadLine());
+        // age = int.Parse(Console.ReadLine());
 
-        Console.WriteLine($"Your age is: {age}");
+        // Console.WriteLine($"Your age is: {age}");
 
-        int x = 20;
-        double z =  12.21;
-        if (age <= 100 && x <= 30 || z < 6)
+        // int x = 20;
+        // double z =  12.21;
+        // if (age <= 100 && x <= 30 || z < 6)
 
-        if (age <= 100)
-        {
-            Console.WriteLine("You are cool");
-        }
-        else if (age <= 150)
-        {
-            Console.WriteLine("You are sort of cool");
-        }
+        // if (age <= 100)
+        // {
+        //     Console.WriteLine("You are cool");
+        // }
+        // else if (age <= 150)
+        // {
+        //     Console.WriteLine("You are sort of cool");
+        // }
 
-        else
-        {
-            Console.WriteLine("wow you have had a lot of birthdays");
-        }
+        // else
+        // {
+        //     Console.WriteLine("wow you have had a lot of birthdays");
+        // }
+
+    
+        // for(int i = 0; i < 10; i+= 3)
+        // {
+        //     Console.WriteLine(i);
+        // }
+    
+        // int y = 10;
+        // int z = ++y;
+        // Console.WriteLine(y);
+        // Console.WriteLine(z);
+    
+        // for(int i = 100000; i >= -100000; i-= 10000)
+        // {
+        //     Console.WriteLine(i);
+        // }
+    
+
+        // while (! done)
+        // {
+        //     Console.Write("Please input your age: ");
+        //     int age = int.Parse(Console.ReadLine());
+        //     if (age >= 0 && age <= 125)
+        //     {
+        //         done = true;
+        //         Console.WriteLine("Thank you.");
+        //     }
+        //     else
+        //     {
+        //         Console.WriteLine("Please input a valid age.");
+        //     }
+
+        // }
+
+
+
+        // bool done;
+        //  do
+        // {
+        //     Console.Write("Please input your age: ");
+        //     int age = int.Parse(Console.ReadLine());
+        //     if (age >= 0 && age <= 125)
+        //     {
+        //         done = true;
+        //         Console.WriteLine("Thank you.");
+        //     }
+        //     else
+        //     {
+        //         done = false;
+        //         Console.WriteLine("Please input a valid age.");
+        //     }
+        // } while (! done);
+
+
+
+        // List<int> myData = new List<int>();
+        // myData.Add(10);
+        // myData.Add(11);
+        // myData.Add(12);
+        // myData.Add(13);
+        // myData.Add(14);
+        // myData.Add(15);
+
+        // Console.WriteLine(myData.Count);
+
+        // foreach(int i in myData)
+        // {
+        //     Console.WriteLine(i);
+        // }
+
+        // List<string> myFriends = ["Bob", "Betty", "Jeannie"];
+        // myFriends.Add("Bubba");
+
+        // foreach(string friend in myFriends)
+        // {
+        //     Console.WriteLine(friend);
+        // }
+    
+
+
+
+
 
     }
+
 }
