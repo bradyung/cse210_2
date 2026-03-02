@@ -1,25 +1,78 @@
 using System;
 using System.IO.Compression;
+using System.Runtime.CompilerServices;
 
 class Program
 {
-    public static void Greeting()
-    {
-        Console.WriteLine("Hello Bob");
-    }
+    // public static void Greeting()
+    // {
+    //     Console.WriteLine("Hello Bob");
+    // }
 
-    public static int AddNumbers(int n1, int n2)
-    {
-        return n1 + n2;
-    }
+    // public static int AddNumbers(int n1, int n2)
+    // {
+    //     return n1 + n2;
+    
+    // }
+
+
+    // public static void passByValue(int a)
+    // {
+    //     a++;
+    //     Console.WriteLine($"In the value function {a}");
+    // }
+
+    // public static void passByRef(ref int x)
+    // {
+    //     x ++;
+    //     Console.WriteLine($"In the ref function {x}");
+    // }
+
+    // public static void passByOut(out int y)
+    // {
+    //     y = 10;
+    // }
+
+
+
 
     static void Main(string[] args)
     {
-        Greeting();
+        Console.WriteLine("Circle");
 
-        int total = AddNumbers(10, 20);
+        Circle myCircle = new Circle();
 
-        Console.WriteLine(total);
+        myCircle.SetRadius(10);
+
+        Console.WriteLine(myCircle.GetRadius());
+
+        Circle myCircle2 = new Circle();
+
+        myCircle2.SetRadius(9999999);
+
+        Console.WriteLine(myCircle2.GetRadius());
+
+        
+        // int x = 20;
+        // Console.WriteLine($"in the main 1: {x}");
+
+        // passByValue(x);
+        // Console.WriteLine($"in the main 2: {x}");
+
+        // passByRef(ref x);
+        // Console.WriteLine($"in the main 3: {x}");
+
+        // int z;
+        // passByOut(out z);
+        // Console.WriteLine(z);
+
+
+
+        // Greeting();
+
+        // int total = AddNumbers(10, 20);
+
+        // Console.WriteLine(total);
     
         // Console.WriteLine("Hello Sandbox World!");
 
@@ -128,6 +181,9 @@ class Program
         //     Console.WriteLine(friend);
         // }
     
+
+
+        
 
 
 
