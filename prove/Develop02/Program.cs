@@ -57,9 +57,10 @@ class Program
                     Console.WriteLine("Enter filename to load: ");
                     string loadFile = Console.ReadLine();
                     journal.LoadFromFile(loadFile);
-                    Console.WriteLine("Journal loaded.");
+                    Console.WriteLine("Journal loaded successfully.");
                     Console.WriteLine("Press enter to continue...");
                     Console.ReadLine();
+
                     
                     break;
                 case 5:

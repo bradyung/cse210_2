@@ -3,7 +3,7 @@ class Menu
 {
     public string[] _menuStrings =
     {
-        "Welcome to th Journal Program!",
+        "Welcome to the Journal Program!",
         "Create, Display, Save, and Load Journal Entries.",
         "1 - Create Journal Entry",
         "2 - Display Journal",
@@ -27,7 +27,7 @@ class Menu
             }
             Console.WriteLine("Choose an option: ");
             userResponse = int.Parse(Console.ReadLine());
-            
+
         } while(userResponse < 1 || userResponse > 5);
 
         
