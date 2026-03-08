@@ -48,16 +48,22 @@ class Program
                     break;
                 case 3:
                     // save journal to file
-                    Console.WriteLine("Enter filename to save: ");
+                    Console.Write("Enter filename to save: ");
                     string saveFile = Console.ReadLine();
                     journal.SaveToFile(saveFile);
+
+                    Console.WriteLine($"Journal saved to {saveFile}.");
+                    Console.WriteLine("Press enter to continue...");
+                    Console.ReadLine();
+
                     break;
                 case 4:
                     // load journal from file
-                    Console.WriteLine("Enter filename to load: ");
+                    Console.Write("Enter filename to load: ");
                     string loadFile = Console.ReadLine();
                     journal.LoadFromFile(loadFile);
-                    Console.WriteLine("Journal loaded successfully.");
+                    journal.DisplayAll();
+                    
                     Console.WriteLine("Press enter to continue...");
                     Console.ReadLine();
 
