@@ -25,7 +25,9 @@ class Menu
             {
                 Console.WriteLine(line);
             }
+            Console.WriteLine("Choose an option: ");
             userResponse = int.Parse(Console.ReadLine());
+            
         } while(userResponse < 1 || userResponse > 5);
 
         
