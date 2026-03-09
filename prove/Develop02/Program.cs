@@ -22,14 +22,20 @@ class Program
                     Console.WriteLine("Your response:");
                     string response = Console.ReadLine();
 
+                    int wordCount = 0;
+
+                    string[] words = response.Split(' ');
+                    wordCount = words.Length;
+
                     Entry newEntry = new Entry();
                     newEntry._date = DateTime.Now.ToShortDateString();
                     newEntry._promptText = prompt;
                     newEntry._entryText = response;
+                    newEntry._wordCount = wordCount;
 
                     journal.AddEntry(newEntry);
 
-                    Console.WriteLine("Journal entry added.");
+                    Console.WriteLine($"Journal entry added. Word count: {wordCount}");
                     Console.WriteLine("Press enter to continue...");
                     Console.ReadLine();
 
