@@ -26,6 +26,7 @@ class Angle
         return degrees * Math.PI / 180.0;
     }
 
+
     public double GetRadians()
     {
         return _radians;
