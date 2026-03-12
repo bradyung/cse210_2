@@ -13,5 +13,8 @@ class Program
         Console.WriteLine(myWord2.GetWordString());
         myWord2.HideWord();
         Console.WriteLine(myWord2.GetWordString());
+
+        ScriptureReference r1 = new ScriptureReference("John", 3, 14, 20);
+        Console.WriteLine(r1.GetDisplayText());
     }
 }
