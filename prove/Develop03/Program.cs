@@ -1,20 +1,30 @@
 using System;
+using System.Data;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Word myWord = new Word("Bob");
-        Console.WriteLine(myWord.GetWordString());
-        myWord.HideWord();
-        Console.WriteLine(myWord.GetWordString());
+        Reference reference = new Reference("Proverbs", 3, 5, 6);
+        Scripture scripture = new Scripture(reference, "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.");
 
-        Word myWord2 = new Word("Moroni");
-        Console.WriteLine(myWord2.GetWordString());
-        myWord2.HideWord();
-        Console.WriteLine(myWord2.GetWordString());
+        string userInput = "";
+        while(userInput.ToLower() != "q" && !scripture.IsCompletelyHidden())
+        {
+            Console.Clear();
+            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine();
+            Console.Write("Press enter to continue or type 'q' to finish: ");
+            userInput = Console.ReadLine();
 
-        ScriptureReference r1 = new ScriptureReference("John", 3, 14, 20);
-        Console.WriteLine(r1.GetDisplayText());
+            if (userInput.ToLower() != "q")
+            {
+                scripture.HideRandomWords(3);
+            }
+        }
+        Console.Clear();
+        Console.WriteLine(scripture.GetDisplayText());
+        Console.WriteLine();
+        Console.WriteLine("Program ended.");
     }
 }
