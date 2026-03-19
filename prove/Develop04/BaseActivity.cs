@@ -22,4 +22,23 @@ class BaseActivity
     {
         Console.WriteLine(_description);
     }
+    public void DisplaySpinner(string message, int seconds)
+    {
+        DateTime currentTime = DateTime.Now;
+        DateTime endTime = currentTime.AddSeconds(seconds);
+        int sleepTime = 150;
+        string animationString = "-\\|/";
+        int index = 0;
+        Console.Clear();
+
+        Console.Write($"{message} ");
+
+        while(DateTime.Now < endTime)
+        {
+            Console.Write(animationString[index++ % animationString.Length]);
+            Thread.Sleep(sleepTime);
+            Console.Write("\b");
+        }
+
+    }
 }
