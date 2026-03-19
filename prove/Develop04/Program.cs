@@ -10,5 +10,6 @@ class Program
         baseActivity.DisplayGreeting();
         baseActivity.DisplayDescription();
         baseActivity.DisplaySpinner("Hey Bob", 5);
+        baseActivity.ShowCountDown(3);
     }
 }

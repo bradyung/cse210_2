@@ -26,7 +26,7 @@ class BaseActivity
     {
         DateTime currentTime = DateTime.Now;
         DateTime endTime = currentTime.AddSeconds(seconds);
-        int sleepTime = 150;
+        int sleepTime = 200;
         string animationString = "-\\|/";
         int index = 0;
         Console.Clear();
@@ -40,5 +40,16 @@ class BaseActivity
             Console.Write("\b");
         }
 
+    }
+    public void ShowCountDown(int seconds)
+    {
+        int sleepTime = 1000;
+
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(sleepTime);
+            Console.Write("\b \b");
+        }
     }
 }
