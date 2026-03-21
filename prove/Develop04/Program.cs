@@ -8,8 +8,11 @@ class Program
             "This activity will help you breath better.");
 
         baseActivity.DisplayGreeting();
+        baseActivity.DisplayFarwell();
         baseActivity.DisplayDescription();
         baseActivity.DisplaySpinner("Hey Bob", 5);
         baseActivity.ShowCountDown(3);
+
+        
     }
 }

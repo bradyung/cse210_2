@@ -16,7 +16,12 @@ class BaseActivity
     }
     public void DisplayGreeting()
     {
+        Console.Clear();
         Console.WriteLine($"Welcome to the {_name} activity.");
+    }
+    public void DisplayFarewell()
+    {
+        DisplaySpinner("Well done! ", 3);
     }
     public void DisplayDescription()
     {
@@ -29,7 +34,6 @@ class BaseActivity
         int sleepTime = 200;
         string animationString = "-\\|/";
         int index = 0;
-        Console.Clear();
 
         Console.Write($"{message} ");
 
@@ -51,5 +55,9 @@ class BaseActivity
             Thread.Sleep(sleepTime);
             Console.Write("\b \b");
         }
+    }
+    public int GetDuration()
+    {
+        return _duration;
     }
 }
