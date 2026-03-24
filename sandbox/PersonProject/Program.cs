@@ -3,18 +3,19 @@ class Program
 {
     public static void ProcessPerson(Person person)
     {
-        if (person is Police police)
-        {
-            Console.WriteLine(police.GetPoliceInformation());
-        }
-        else if (person is Doctor doctor)
-        {
-            Console.WriteLine(doctor.GetDoctorInformation());
-        }
-        else
-        {
-            Console.WriteLine(person.GetPersonInformation());
-        }
+        Console.WriteLine(person.GetPersonInformation());
+        // if (person is Police police)
+        // {
+        //     Console.WriteLine(police.GetPoliceInformation());
+        // }
+        // else if (person is Doctor doctor)
+        // {
+        //     Console.WriteLine(doctor.GetDoctorInformation());
+        // }
+        // else
+        // {
+        //     Console.WriteLine(person.GetPersonInformation());
+        // }
     }
     public static void Main(string[] args)
     {
@@ -22,17 +23,17 @@ class Program
         Console.WriteLine(person.GetPersonInformation());
 
         Doctor myDoctor = new Doctor("Axe", "Bob", "Budge", 75, 210);
-        Console.WriteLine(myDoctor.GetDoctorInformation());
+        // Console.WriteLine(myDoctor.GetDoctorInformation());
 
-        Doctor myDoctor2 = new Doctor("Axe", "Bob", "Budge", 75, 210);
-        Console.WriteLine(myDoctor2.GetDoctorInformation());
+        Doctor myDoctor2 = new Doctor("knife", "Bob", "Budge", 75, 210);
+        // Console.WriteLine(myDoctor2.GetDoctorInformation());
 
         Police myPolice = new Police("Gun","Lance", "Bob", 43, 198);
-        Console.WriteLine(myPolice.GetPoliceInformation());
+        // Console.WriteLine(myPolice.GetPoliceInformation());
 
         myPolice.SetWeight(myPolice.GetWeight() + 5);
         myPolice.SetAge(myPolice.GetAge() + 1);
-        Console.WriteLine(myPolice.GetPoliceInformation());
+        // Console.WriteLine(myPolice.GetPoliceInformation());
 
         List<Person> myPeople = new List<Person>();
         myPeople.Add(person);
