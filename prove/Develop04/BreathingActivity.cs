@@ -1,8 +1,6 @@
 
 
-using System.Diagnostics;
-
-public class BreathingActivity : BaseActivity
+class BreathingActivity : BaseActivity
 {
     public BreathingActivity()
         : base(
@@ -14,18 +12,22 @@ public class BreathingActivity : BaseActivity
     public void Run()
     {
         DisplayGreeting();
+        DisplayDescription();
+        SetDuration();
+        PrepareToBegin();
+        Console.Clear();
         DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
         while (DateTime.Now < endTime)
         {
-            Console.Write("Breathe in... ");
-            ShowCountDown(4);
+            Console.Write("Breath in... ");
+            ShowCountDown(6);
             if (DateTime.Now >= endTime)
             {
                 break;
             }
             Console.Write("Breath out... ");
-            ShowCountDown();
+            ShowCountDown(6);
         }
-        DisplayFarwell();
+        DisplayFarewell();
     }
 }

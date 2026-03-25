@@ -1,4 +1,5 @@
-
+using System;
+using System.Threading;
 
 class BaseActivity
 {
@@ -18,14 +19,33 @@ class BaseActivity
     {
         Console.Clear();
         Console.WriteLine($"Welcome to the {_name} activity.");
-    }
-    public void DisplayFarewell()
-    {
-        DisplaySpinner("Well done! ", 3);
+        Console.WriteLine();
     }
     public void DisplayDescription()
     {
         Console.WriteLine(_description);
+        Console.WriteLine();
+    }
+    public void SetDuration()
+    {
+        Console.WriteLine("How long, in second, would you like for your session? ");
+        _duration = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+    }
+    public void PrepareToBegin()
+    {
+        // Console.WriteLine("Prepare to begin...");
+        // Console.Clear();
+        DisplaySpinner("Prepare to begin ", 3);
+        Console.WriteLine();
+    }
+    public void DisplayFarewell()
+    {
+        // Console.Clear();
+        DisplaySpinner("Well Done!!", 3);
+        Console.WriteLine();
+        // Console.WriteLine($"You have completed another {_duration} seconds for the {_name} Activity.");
+        DisplaySpinner($"You have completed another {_duration} seconds for the {_name} Activity.", 3);
     }
     public void DisplaySpinner(string message, int seconds)
     {
