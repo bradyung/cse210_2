@@ -6,6 +6,8 @@ class Program
     {
         Goal myGoal = new Goal();
         myGoal.SetName();
+        myGoal.SetDescription();
+        myGoal.SetPoints();
         Console.WriteLine(myGoal.GetConsoleString());
     }
 }
