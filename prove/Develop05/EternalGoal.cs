@@ -17,11 +17,11 @@ public class EternalGoal : Goal
 
     public override string GetDisplayString()
     {
-        return "[ ] " + _name + " (" + _description + ")";
+        return $"[ ] {_name} ({_description})";
     }
 
     public override string GetSaveString()
     {
-        return "EternalGoal#" + _name + "#" + _description + "#" + _points;
+        return $"EternalGoal#{_name}#{_description}#{_points}";
     }
 }

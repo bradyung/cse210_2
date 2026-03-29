@@ -28,16 +28,16 @@ public class SimpleGoal : Goal
     {
         if (_isComplete)
         {
-            return "[X] " + _name + " (" + _description + ")";
+            return $"[X] {_name} ({_description})";
         }
         else
         {
-            return "[ ] " + _name + " (" + _description + ")";
+            return $"[ ] {_name} ({_description})";
         }
     }
 
     public override string GetSaveString()
     {
-        return "SimpleGoal#" + _name + "#" + _description + "#" + _points + "#" + _isComplete;
+        return $"SimpleGoal#{_name}#{_description}#{_points}#{_isComplete}";
     }
 }

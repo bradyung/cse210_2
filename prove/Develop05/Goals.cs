@@ -45,8 +45,8 @@ public class Goals
             int pointsEarned = _goals[goalNumber].RecordEvent();
             _score = _score + pointsEarned;
 
-            Console.WriteLine("You earned " + pointsEarned + " points!");
-            Console.WriteLine("Your total score is now " + _score + ".");
+            Console.WriteLine($"You earned {pointsEarned} points!");
+            Console.WriteLine($"Your total score is now {_score}.");
         }
         else
         {
